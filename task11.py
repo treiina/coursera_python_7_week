@@ -8,8 +8,9 @@ for i in info:
 list_voices_spreading = list(voices_spreading.items())
 list_voices_spreading.sort(key=lambda x: x[1], reverse=True)
 if int(list_voices_spreading[0][1])/len(info) > 0.5:
-    print(list_voices_spreading[0][0], file=outFile)
+    print(list_voices_spreading[0][0], file=outFile, end="")
 else:
-    print(list_voices_spreading[0][0], list_voices_spreading[1][0], sep='\n', file=outFile)
+    print(list_voices_spreading[0][0], list_voices_spreading[1][0],
+          sep='\n', file=outFile, end="")
 inFile.close()
 outFile.close()
